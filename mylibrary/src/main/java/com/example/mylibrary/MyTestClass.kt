@@ -11,8 +11,8 @@ class MyTestClass : AppCompatActivity() {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
 
-    fun navigate() {
-        val intent = Intent(this, NewActivity::class.java)
+    fun navigate(context:Context) {
+        val intent = Intent(context, NewActivity::class.java)
         startActivity(intent)
     }
 }
