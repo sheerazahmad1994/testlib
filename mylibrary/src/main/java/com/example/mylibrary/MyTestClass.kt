@@ -1,11 +1,18 @@
 package com.example.mylibrary
 
 import android.content.Context
+import android.content.Intent
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
-class MyTestClass {
+class MyTestClass : AppCompatActivity() {
 
-    public fun myToast(context: Context, message: String) {
+    fun myToast(context: Context, message: String) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+    }
+
+    fun navigate() {
+        val intent = Intent(this, NewActivity::class.java)
+        startActivity(intent)
     }
 }
